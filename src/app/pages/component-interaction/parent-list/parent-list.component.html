@@ -1,2 +1,4 @@
 <p>parent-list works!</p>
-<app-child-detail [childMessage]="parentMessage" [childMessageValidator]="parentMessageValidator"></app-child-detail> 
+<!-- <app-child-detail [childMessage]="parentMessage" [childMessageValidator]="parentMessageValidator"></app-child-detail>  -->
+<app-child-detail *ngFor="let author of authors" [author]="author" (deleteAuthor)="handleDelete($event)" [templateVariavle]="templateVariavle"></app-child-detail> 
+<app-template-variavle #templateVariavle></app-template-variavle>

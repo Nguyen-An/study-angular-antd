@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Author, authors } from '../constain';
+import { TemplateVariavleComponent } from './template-variavle/template-variavle.component';
 
 @Component({
   selector: 'app-parent-list',
@@ -6,6 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './parent-list.component.scss'
 })
 export class ParentListComponent {
+  @ViewChild('templateVariavle') templateVariavle!: ElementRef<TemplateVariavleComponent>;
   parentMessage: number = 100;
-  parentMessageValidator: number = 200
+  parentMessageValidator: number = 200;
+
+  authors: Author[] = authors;
+
+  handleDelete(id: number) {
+    this.authors = this.authors.filter( item => item.id != id)
+  }
 }
