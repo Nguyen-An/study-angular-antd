@@ -4,6 +4,7 @@ import { ChildDetailComponent } from "./parent-list/child-detail/child-detail.co
 import { ComponentInteractionRoutingModule } from "./component-interaction-routing.module";
 import { CommonModule } from "@angular/common";
 import { TemplateVariavleComponent } from './parent-list/template-variavle/template-variavle.component';
+import { CurrencyFormatPipe } from "../../common/pipe/currency-format.pipe";
 
 @NgModule({
     imports: [
@@ -13,7 +14,8 @@ import { TemplateVariavleComponent } from './parent-list/template-variavle/templ
     declarations: [
         ParentListComponent,
         ChildDetailComponent,
-        TemplateVariavleComponent
+        TemplateVariavleComponent,
+        CurrencyFormatPipe
     ],
     exports: [
         ParentListComponent,

@@ -25,15 +25,15 @@ export class ChildDetailComponent {
     this.deleteAuthor.emit(id);
   }
 
-  constructor() {
-    console.log('constructor: ', this.templateVariavle);
-  }
+  // constructor() {
+  //   console.log('constructor: ', this.templateVariavle);
+  // }
 
-  ngOnChanges() {
-    console.log('ngOnChanges: ', this.templateVariavle);
-  }
+  // ngOnChanges() {
+  //   console.log('ngOnChanges: ', this.templateVariavle);
+  // }
 
-  ngOnInit() {
-    console.log('ngOnInit: ', this.templateVariavle);
-  }
+  // ngOnInit() {
+  //   console.log('ngOnInit: ', this.templateVariavle);
+  // }
 }
